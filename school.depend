@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1714341872 source:o:\courses\es(abdel-baset)\projects\schoool\school\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"admin.h"
+	"user.h"
+	"list.h"
+
+1714340133 source:o:\courses\es(abdel-baset)\projects\schoool\school\student.c
+	"student.h"
+	<string.h>
+	<windows.h>
+
+1714340541 o:\courses\es(abdel-baset)\projects\schoool\school\student.h
+
+1714341330 source:o:\courses\es(abdel-baset)\projects\schoool\school\string.c
+	<stdio.h>
+
+1714342144 source:o:\courses\es(abdel-baset)\projects\schoool\school\admin.c
+	<stdio.h>
+	"admin.h"
+	<string.h>
+	<windows.h>
+	"list.h"
+
+1714342162 o:\courses\es(abdel-baset)\projects\schoool\school\admin.h
+	<stdio.h>
+	"list.h"
+
+1714341166 o:\courses\es(abdel-baset)\projects\schoool\school\user.h
+
+1714341186 source:o:\courses\es(abdel-baset)\projects\schoool\school\user.c
+	"admin.h"
+	<string.h>
+	<windows.h>
+
+1714342185 o:\courses\es(abdel-baset)\projects\schoool\school\list.h
+
+1714342144 source:o:\courses\es(abdel-baset)\projects\schoool\studentsystem\admin.c
+	<stdio.h>
+	"admin.h"
+	<string.h>
+	<windows.h>
+	"list.h"
+
+1714342162 o:\courses\es(abdel-baset)\projects\schoool\studentsystem\admin.h
+	<stdio.h>
+	"list.h"
+
+1714342185 o:\courses\es(abdel-baset)\projects\schoool\studentsystem\list.h
+
+1714341872 source:o:\courses\es(abdel-baset)\projects\schoool\studentsystem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"admin.h"
+	"user.h"
+	"list.h"
+
+1714341166 o:\courses\es(abdel-baset)\projects\schoool\studentsystem\user.h
+
+1714341330 source:o:\courses\es(abdel-baset)\projects\schoool\studentsystem\string.c
+	<stdio.h>
+
+1714341186 source:o:\courses\es(abdel-baset)\projects\schoool\studentsystem\user.c
+	"admin.h"
+	<string.h>
+	<windows.h>
+
