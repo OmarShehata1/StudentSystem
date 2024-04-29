@@ -485,7 +485,7 @@ void mode(void)
             mainMenu();
             break;
         case 2:
-            User_mode();
+                studentMode(school, TotalStudents);
             break;
         default:
             printf("Invalid Number\n");
