@@ -70,3 +70,39 @@
 	<string.h>
 	<windows.h>
 
+1714407132 source:c:\users\doc\desktop\new folder (3)\studentsystem\admin.c
+	<stdio.h>
+	"admin.h"
+	<string.h>
+	<windows.h>
+	"list.h"
+
+1714407464 c:\users\doc\desktop\new folder (3)\studentsystem\admin.h
+	<stdio.h>
+	"list.h"
+
+1714406475 c:\users\doc\desktop\new folder (3)\studentsystem\list.h
+
+1714406475 source:c:\users\doc\desktop\new folder (3)\studentsystem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"admin.h"
+	"user.h"
+	"list.h"
+
+1714407386 c:\users\doc\desktop\new folder (3)\studentsystem\user.h
+	<stdio.h>
+	"list.h"
+
+1714407097 source:c:\users\doc\desktop\new folder (3)\studentsystem\string.c
+	<stdio.h>
+
+1714407515 source:c:\users\doc\desktop\new folder (3)\studentsystem\user.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"user.h"
+	"list.h"
+
