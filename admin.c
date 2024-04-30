@@ -7,6 +7,26 @@
 
 extern int TotalStudents;
 extern struct student school[MAXSTUDENTS];
+static int password=1234;
+
+void passcheck(){
+   int i,pass;
+printf("Please Enter The Password\n");
+for(i=0;i<3;i++){
+    scanf("%d",&pass);
+    if(pass==password){
+        printf("---->Welcome To Admin Mode<----\n");
+       mainMenu();
+        break;
+    }
+    else{
+        if(i!=2)
+    printf("Wrong Password !!,Try agian\n");
+    else
+        printf("Wrong Password !!,No more tries\n");
+}
+}
+}
 
 void student_add(struct student *ps)
 {
@@ -465,7 +485,7 @@ void student_print(struct student s )
 }
 
 
-void mode(void)
+/*void mode(void)
 {
     int choice ;
     char key;
@@ -485,7 +505,7 @@ void mode(void)
             mainMenu();
             break;
         case 2:
-                studentMode(school, TotalStudents);
+               // studentMode(school, TotalStudents);
             break;
         default:
             printf("Invalid Number\n");
@@ -498,3 +518,4 @@ void mode(void)
     }
     while(key!='Q' && key!='q');
 }
+*/

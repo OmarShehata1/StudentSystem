@@ -6,36 +6,9 @@
 
 extern int TotalStudents;
 extern struct student school[MAXSTUDENTS];
-
-void viewRecord(struct student *arr, int index) {
-    if (index != -1) {
-        student_print(arr[index]);
-    } else {
-        printf("Student record not found.\n");
-    }
-}
-
-void editPassword(struct student *arr, int index) {
-    if (index != -1) {
-        printf("Enter new password: ");
-        string_scan(arr[index].password, PASSWORDMAX);
-        printf("Password updated successfully!\n");
-    } else {
-        printf("Student record not found.\n");
-    }
-}
-
-void editName(struct student *arr, int index) {
-    if (index != -1) {
-        printf("Enter new name: ");
-        string_scan(arr[index].name, NAMEMAX);
-        printf("Name updated successfully!\n");
-    } else {
-        printf("Student record not found.\n");
-    }
-}
-
-void studentMode(struct student *arr, int TotalStudents) {
+void studentMode() {
+    int TotalStudents;
+    s_t *arr;
     char id[IDMAX];
     char password[PASSWORDMAX];
     int index;
@@ -81,4 +54,34 @@ void studentMode(struct student *arr, int TotalStudents) {
         printf("Invalid ID or password. Access denied.\n");
     }
 }
+
+void viewRecord(struct student *arr, int index) {
+    if (index != -1) {
+        student_print(arr[index]);
+    } else {
+        printf("Student record not found.\n");
+    }
+}
+
+void editPassword(struct student *arr, int index) {
+    if (index != -1) {
+        printf("Enter new password: ");
+        string_scan(arr[index].password, PASSWORDMAX);
+        printf("Password updated successfully!\n");
+    } else {
+        printf("Student record not found.\n");
+    }
+}
+
+void editName(struct student *arr, int index) {
+    if (index != -1) {
+        printf("Enter new name: ");
+        string_scan(arr[index].name, NAMEMAX);
+        printf("Name updated successfully!\n");
+    } else {
+        printf("Student record not found.\n");
+    }
+}
+
+
 
