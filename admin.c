@@ -9,23 +9,28 @@ extern int TotalStudents;
 extern struct student school[MAXSTUDENTS];
 static int password=1234;
 
-void passcheck(){
-   int i,pass;
-printf("Please Enter The Password\n");
-for(i=0;i<3;i++){
-    scanf("%d",&pass);
-    if(pass==password){
-        printf("---->Welcome To Admin Mode<----\n");
-       mainMenu();
-        break;
+void passcheck()
+{
+    int i,pass;
+    printf("Please Enter The Password\n");
+    for(i=0; i<3; i++)
+    {
+        scanf("%d",&pass);
+        if(pass==password)
+        {
+            printf("---->Welcome To Admin Mode<----\n");
+            system("cls");
+            mainMenu();
+            break;
+        }
+        else
+        {
+            if(i!=2)
+                printf("Wrong Password !!,Try agian\n");
+            else
+                printf("Wrong Password !!,No more tries\n");
+        }
     }
-    else{
-        if(i!=2)
-    printf("Wrong Password !!,Try agian\n");
-    else
-        printf("Wrong Password !!,No more tries\n");
-}
-}
 }
 
 void student_add(struct student *ps)
@@ -48,7 +53,8 @@ void student_add(struct student *ps)
             string_scan(ps->id,IDMAX);
 
         }
-    }while(1);
+    }
+    while(1);
 
 
 
@@ -71,7 +77,8 @@ void student_add(struct student *ps)
             string_scan(ps->name,NAMEMAX);
 
         }
-    }while(1);
+    }
+    while(1);
 
 
 
@@ -99,7 +106,8 @@ void student_add(struct student *ps)
             break;
         }
 
-    }while(1);
+    }
+    while(1);
 
     printf("Enter NumberOfCourse: ");
     scanf("%d",&ps->NumberOfCourse);
@@ -117,7 +125,8 @@ void student_add(struct student *ps)
             scanf("%d",&ps->NumberOfCourse);
         }
 
-    }while(1);
+    }
+    while(1);
 
 
     TotalStudents++;
@@ -428,6 +437,8 @@ int student_Search(struct student*arr,char*name)
 
 }
 
+
+
 void student_print(struct student s )
 {
     printf("|==========|====================|==============================|====================|=============|==========|\n");
@@ -485,27 +496,31 @@ void student_print(struct student s )
 }
 
 
-/*void mode(void)
+void mode(void)
 {
     int choice ;
+    printf("\t\t\t----> Welcome to Student Record System <----\n\n");
     char key;
     do
     {
         printf("\n\t\t\t   main Mode \t\t\n");
         printf("\t\t==================================\n\n");
-        printf("\t\t[1]Admin Mode\n");
-        printf("\t\t[2]User Mode\n\n");
+        printf("\t\t[1] Admin Mode\n");
+        printf("\t\t[2] User Mode\n\n");
 
         printf("Select Mode :");
         scanf("%d",&choice);
         system("cls");
+
         switch(choice)
         {
         case 1:
+            passcheck();
+            system("cls");
             mainMenu();
             break;
         case 2:
-               // studentMode(school, TotalStudents);
+            userMode();
             break;
         default:
             printf("Invalid Number\n");
@@ -518,4 +533,4 @@ void student_print(struct student s )
     }
     while(key!='Q' && key!='q');
 }
-*/
+

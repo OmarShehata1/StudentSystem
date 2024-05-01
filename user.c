@@ -6,82 +6,132 @@
 
 extern int TotalStudents;
 extern struct student school[MAXSTUDENTS];
-void studentMode() {
-    int TotalStudents;
-    s_t *arr;
+
+
+void userMode(void)
+{
     char id[IDMAX];
+    char name[NAMEMAX];
     char password[PASSWORDMAX];
-    int index;
-    int choice;
+    int found_Student;
+    char key,IsCorrect=3;
 
-    printf("Enter your ID: ");
-    string_scan(id, IDMAX);
-    printf("Enter your password: ");
-    string_scan(password, PASSWORDMAX);
+    printf("Enter student ID: ");
+    string_scan(id,IDMAX);
+    found_Student=student_Search1(school,id);
+    while(IsCorrect)
+    {
+            if(found_Student!=-1)
+            {
+                printf("Enter student Password: ");
+                string_scan(password,PASSWORDMAX);
+                if(strcasecmp(school[found_Student].password,password)==0)
+                {
+                    do
+                    {
 
-    index = student_Search(arr, id);
+                        int choice;
+                        printf("\n\t\t\t  User Menu\t\t\n");
+                        printf("\t\t==================================\n\n");
+                        printf("\t\t[1]view your Record\n");
+                        printf("\t\t[2]Edit your Password\n");
+                        printf("\t\t[3]Edit your name \n");
+                        printf("Enter choice: ");
+                        scanf("%d",&choice);
+                        switch(choice)
+                        {
 
-    if (index != -1 && strcmp(arr[index].password, password) == 0) {
-        do {
-            printf("\n\t\t\t  Student Mode\n");
-            printf("\t\t==================================\n\n");
-            printf("\t\t[1] View your record\n");
-            printf("\t\t[2] Edit your password\n");
-            printf("\t\t[3] Edit your name\n");
-            printf("\t\t[4] Exit Student Mode\n\n");
-            printf("Enter your choice: ");
-            scanf("%d", &choice);
-            system("cls");
+                        case 1:
+                            student_print(school[found_Student]);
 
-            switch (choice) {
-                case 1:
-                    viewRecord(arr, index);
-                    break;
-                case 2:
-                    editPassword(arr, index);
-                    break;
-                case 3:
-                    editName(arr, index);
-                    break;
-                case 4:
-                    printf("Exiting Student Mode...\n");
-                    break;
-                default:
-                    printf("Invalid choice. Please try again.\n");
+                            break;
+                        case 2:
+                            student_editPassword(school,id);
+                            break;
+                        case 3:
+                            student_editName(school,id);
+                            system("cls");
+
+                            break;
+                        default:
+                            printf("Invalid Number \n\n");
+                        }
+                        printf("Press any key to continue, Q to Quit ...");
+                        scanf(" %c",&key);
+                        system("cls");
+                    }
+                    while(key!='Q' && key!='q');
+                }
+                else
+                {
+                    IsCorrect--;
+                    system("cls");
+                    printf("Wrong Password \n\n");
+                }
             }
-        } while (choice != 4);
-    } else {
-        printf("Invalid ID or password. Access denied.\n");
-    }
-}
-
-void viewRecord(struct student *arr, int index) {
-    if (index != -1) {
-        student_print(arr[index]);
-    } else {
-        printf("Student record not found.\n");
-    }
-}
-
-void editPassword(struct student *arr, int index) {
-    if (index != -1) {
-        printf("Enter new password: ");
-        string_scan(arr[index].password, PASSWORDMAX);
-        printf("Password updated successfully!\n");
-    } else {
-        printf("Student record not found.\n");
-    }
-}
-
-void editName(struct student *arr, int index) {
-    if (index != -1) {
-        printf("Enter new name: ");
-        string_scan(arr[index].name, NAMEMAX);
-        printf("Name updated successfully!\n");
-    } else {
-        printf("Student record not found.\n");
+            else
+            {
+                printf("Not found Student!!\n");
+            }
     }
 }
 
 
 
+
+
+int student_Search1(struct student*arr,char*id)
+{
+    int i;
+    for( i=0 ; i<TotalStudents ; i++)
+    {
+        if((strcmp(id,arr[i].id)==0))
+        {
+            return i;
+        }
+    }
+    return -1;
+
+}
+
+int student_Search2(struct student*arr,char*password)
+{
+    int i;
+    for( i=0 ; i<TotalStudents ; i++)
+    {
+        if((strcmp(password,arr[i].password)==0))
+        {
+            return i;
+        }
+    }
+    return -1;
+
+}
+
+void student_editName(struct student*arr,char*id )
+{
+    int i;
+    for( i=0 ; i<TotalStudents ; i++)
+    {
+        if(strcmp(arr[i].id,id)==0)
+        {
+            printf("Enter name: ");
+            string_scan(arr[i].name,NAMEMAX);
+            printf("\n");
+        }
+    }
+}
+
+void student_editPassword(struct student*arr,char*id )
+{
+    int i;
+    for( i=0 ; i<TotalStudents ; i++)
+    {
+        if(strcmp(arr[i].id,id)==0)
+        {
+            printf("Enter password : ");
+            string_scan(arr[i].password,PASSWORDMAX);
+            printf("\n");
+        }
+    }
+}
