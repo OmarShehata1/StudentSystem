@@ -499,7 +499,7 @@ void student_print(struct student s )
 void mode(void)
 {
     int choice ;
-    printf("\t\t\t----> Welcome to Student Record System <----\n\n");
+    printf("\n\t\t\t----> Welcome to Student Record System <----\n\n");
     char key;
     do
     {
