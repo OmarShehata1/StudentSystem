@@ -5,9 +5,8 @@
 #include "admin.h"
 #include "user.h"
 #include "list.h"
+#include "file_access.h"
 int TotalStudents=5;
-
-
 struct student school[MAXSTUDENTS]= {{"1005","omar","123456","3.5",20,2},
     {"1004","mohamed","98765","3.8",21,3},
     {"1003","ahmed","25895","3.4",22,4},
@@ -16,10 +15,10 @@ struct student school[MAXSTUDENTS]= {{"1005","omar","123456","3.5",20,2},
 };
 
 int main() {
-    mode();
-
+    readFromFile(&school, "student_file");
+       mode();
+    writeToFile(&school, TotalStudents, "student_file");
     return 0;
 }
-
 
 
