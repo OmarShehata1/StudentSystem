@@ -142,3 +142,51 @@
 	"user.h"
 	"list.h"
 
+1714838627 source:c:\users\doc\desktop\project\studentsystem\admin.c
+	<stdio.h>
+	"admin.h"
+	<string.h>
+	<windows.h>
+	"list.h"
+
+1714838627 c:\users\doc\desktop\project\studentsystem\admin.h
+	<stdio.h>
+	"list.h"
+
+1714838627 c:\users\doc\desktop\project\studentsystem\list.h
+
+1714838910 source:c:\users\doc\desktop\project\studentsystem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"admin.h"
+	"user.h"
+	"list.h"
+	"file_access.h"
+
+1714838627 c:\users\doc\desktop\project\studentsystem\user.h
+	<stdio.h>
+	"list.h"
+
+1714838627 source:c:\users\doc\desktop\project\studentsystem\string.c
+	<stdio.h>
+
+1714838627 source:c:\users\doc\desktop\project\studentsystem\user.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"user.h"
+	"list.h"
+
+1714839039 source:c:\users\doc\desktop\project\studentsystem\file_access.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"user.h"
+	"list.h"
+
+1714839047 c:\users\doc\desktop\project\studentsystem\file_access.h
+	"list.h"
+	<stdio.h>
+

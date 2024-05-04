@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="admin.h" />
+		<Unit filename="file_access.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="file_access.h" />
 		<Unit filename="list.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
