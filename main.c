@@ -16,8 +16,8 @@ struct student school[MAXSTUDENTS]= {{"1005","omar","123456","3.5",20,2},
 
 int main() {
     readFromFile(&school, "student_file");
-    writeToFile(&school, TotalStudents, "student_file");
        mode();
+    writeToFile(&school, TotalStudents, "student_file");
     return 0;
 }
 
