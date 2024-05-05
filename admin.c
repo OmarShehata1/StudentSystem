@@ -392,6 +392,8 @@ void student_Remove(struct student *arr,char* id)
         TotalStudents--;
     }
     printf("\n\n\t\t\t student Removed successfully! \n\n\n");
+    writeToFile(*arr);
+    
 }
 
 
