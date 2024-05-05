@@ -49,7 +49,6 @@
 		<Unit filename="student.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="student.h" />
 		<Unit filename="user.c">
 			<Option compilerVar="CC" />
 		</Unit>

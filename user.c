@@ -50,7 +50,7 @@ void userMode(void)
                             break;
                         case 3:
                             student_editName(school,id);
-                            system("cls");
+
 
                             break;
                         default:
@@ -120,6 +120,8 @@ void student_editName(struct student*arr,char*id )
             printf("\n");
         }
     }
+
+    printf("\n\n\t\t\t Edit your name successfully! \n\n\n");
 }
 
 void student_editPassword(struct student*arr,char*id )
@@ -134,4 +136,5 @@ void student_editPassword(struct student*arr,char*id )
             printf("\n");
         }
     }
+    printf("\n\n\t\t\t Edit your password successfully! \n\n\n");
 }

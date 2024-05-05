@@ -35,6 +35,7 @@ void passcheck()
 
 void student_add(struct student *ps)
 {
+
     int checknumber;
     printf("Enter ID: ");
     string_scan(ps->id,IDMAX);
@@ -131,13 +132,16 @@ void student_add(struct student *ps)
 
     TotalStudents++;
     system("cls");
+
+    writeToFile(*ps);
     printf("\n\n\t\t\t student added successfully! \n\n\n");
 }
 
 void mainMenu()
 {
 
-    char name[20];
+    char name[NAMEMAX];
+    char id[IDMAX];
     int found_Student;
     char key;
     do
@@ -149,7 +153,6 @@ void mainMenu()
         printf("\t\t[1]Add Student\n");
         printf("\t\t[2]Edit student\n");
         printf("\t\t[3]Remove student \n");
-        //  printf("\t\t[4]Call student \n");
         printf("\t\t[4]search student\n");
         printf("\t\t[5]Sort school \n");
         printf("\t\t[6]Print school\n\n\n");
@@ -166,30 +169,25 @@ void mainMenu()
             if(TotalStudents<100)
             {
                 student_add(&school[TotalStudents]);
-                //system("cls");
+
             }
             break;
         case 2:
-            printf("Enter student name: ");
-            string_scan(name,NAMEMAX);
-            student_edit(school,name);
+            printf("Enter student id: ");
+            string_scan(id,IDMAX);
+            student_edit(school,id);
             system("cls");
             break;
         case 3:
-            printf("Enter student name: ");
-            string_scan(name,NAMEMAX);
-            student_Remove(school,name);
-            system("cls");
+            printf("Enter student id: ");
+            string_scan(id,IDMAX);
+            student_Remove(school,id);
+
             break;
-        /*  case 4:
-              printf("Enter student name: ");
-              string_scan(name,NAMEMAX);
-              student_call(school,TotalStudents,name);
-              break;*/
         case 4:
-            printf("Enter student name: ");
-            string_scan(name,NAMEMAX);
-            found_Student=student_Search(school,name);
+            printf("Enter student id: ");
+            string_scan(id,IDMAX);
+            found_Student=student_Search(school,id);
             printf("%d\n\n",found_Student);
             if(found_Student!=-1)
             {
@@ -312,12 +310,12 @@ void student_printAll(struct student *arr)
 
 
 
-void student_edit(struct student*arr,char*name )
+void student_edit(struct student*arr,char*id )
 {
     int i;
     for( i=0 ; i<TotalStudents ; i++)
     {
-        if(strcmp(arr[i].name,name)==0)
+        if(strcmp(arr[i].id,id)==0)
         {
             int object;
             printf("\t\t\t[1] Name\n");
@@ -370,12 +368,12 @@ void student_edit(struct student*arr,char*name )
 
 
 
-void student_Remove(struct student *arr,char* name)
+void student_Remove(struct student *arr,char* id)
 {
     int i,found_index=-1;
     for(i=0; i<TotalStudents; i++)
     {
-        if(strcmp(arr[i].name,name)==0)
+        if(strcmp(arr[i].id,id)==0)
         {
             found_index=i;
             break;
@@ -393,6 +391,7 @@ void student_Remove(struct student *arr,char* name)
         }
         TotalStudents--;
     }
+    printf("\n\n\t\t\t student Removed successfully! \n\n\n");
 }
 
 
@@ -423,12 +422,12 @@ void student_sortByName(struct student *arr)
 
 
 
-int student_Search(struct student*arr,char*name)
+int student_Search(struct student*arr,char*id)
 {
     int i;
     for( i=0 ; i<TotalStudents ; i++)
     {
-        if((strcmp(name,arr[i].name)==0))
+        if((strcmp(id,arr[i].id)==0))
         {
             return i;
         }
