@@ -363,6 +363,7 @@ void student_edit(struct student*arr,char*id )
         }
 
     }
+    writeToFile(*arr);
 }
 
 
