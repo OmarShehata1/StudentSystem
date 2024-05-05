@@ -122,6 +122,7 @@ void student_editName(struct student*arr,char*id )
     }
 
     printf("\n\n\t\t\t Edit your name successfully! \n\n\n");
+    writeToFile(*arr);
 }
 
 void student_editPassword(struct student*arr,char*id )
@@ -137,4 +138,5 @@ void student_editPassword(struct student*arr,char*id )
         }
     }
     printf("\n\n\t\t\t Edit your password successfully! \n\n\n");
+    writeToFile(*arr);
 }
