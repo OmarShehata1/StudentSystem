@@ -106,7 +106,7 @@
 	"user.h"
 	"list.h"
 
-1714597780 source:o:\studentsystem-main\studentsystem\admin.c
+1714926088 source:o:\studentsystem-main\studentsystem\admin.c
 	<stdio.h>
 	"admin.h"
 	<string.h>
@@ -119,7 +119,7 @@
 
 1714589463 o:\studentsystem-main\studentsystem\list.h
 
-1714595765 source:o:\studentsystem-main\studentsystem\main.c
+1714926133 source:o:\studentsystem-main\studentsystem\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -127,6 +127,7 @@
 	"admin.h"
 	"user.h"
 	"list.h"
+	"file_access.h"
 
 1714595390 o:\studentsystem-main\studentsystem\user.h
 	<stdio.h>
@@ -135,10 +136,69 @@
 1714589463 source:o:\studentsystem-main\studentsystem\string.c
 	<stdio.h>
 
-1714597210 source:o:\studentsystem-main\studentsystem\user.c
+1714922667 source:o:\studentsystem-main\studentsystem\user.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"user.h"
 	"list.h"
+
+1714838627 source:c:\users\doc\desktop\project\studentsystem\admin.c
+	<stdio.h>
+	"admin.h"
+	<string.h>
+	<windows.h>
+	"list.h"
+
+1714838627 c:\users\doc\desktop\project\studentsystem\admin.h
+	<stdio.h>
+	"list.h"
+
+1714838627 c:\users\doc\desktop\project\studentsystem\list.h
+
+1714838910 source:c:\users\doc\desktop\project\studentsystem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"admin.h"
+	"user.h"
+	"list.h"
+	"file_access.h"
+
+1714838627 c:\users\doc\desktop\project\studentsystem\user.h
+	<stdio.h>
+	"list.h"
+
+1714838627 source:c:\users\doc\desktop\project\studentsystem\string.c
+	<stdio.h>
+
+1714838627 source:c:\users\doc\desktop\project\studentsystem\user.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"user.h"
+	"list.h"
+
+1714839039 source:c:\users\doc\desktop\project\studentsystem\file_access.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"user.h"
+	"list.h"
+
+1714839047 c:\users\doc\desktop\project\studentsystem\file_access.h
+	"list.h"
+	<stdio.h>
+
+1714926586 source:o:\studentsystem-main\studentsystem\file_access.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"user.h"
+	"list.h"
+
+1714926088 o:\studentsystem-main\studentsystem\file_access.h
+	"list.h"
+	<stdio.h>
 
